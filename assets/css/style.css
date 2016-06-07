@@ -1,0 +1,502 @@
+/*  ---------------------------------------------------------------------------
+
+    Author: Vandré Leal Cândido
+    Description: Washington & Jefferson College - CIS Department
+    Year: 2014
+
+---------------------------------------------------------------------------  */
+
+
+/* FONT IMPORT */
+
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Varela Round', 'Times New Roman', sans-serif;
+    letter-spacing: -.035em;
+    color: #4F535F;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, ul { margin: 0; }
+
+a       { color: #d9534f; }
+a:hover,
+a:focus,
+a:visited { color: #d9534f; }
+
+a, ul, ol, button, .item {
+    text-decoration: none;
+    -webkit-transition: background-color .2s linear, color .2s linear, border .2s linear;
+    transition: background-color .2s linear, color .2s linear, border .2s linear;
+}
+
+::selection         { background:rgba(0,0,0,0.1); }
+::-moz-selection    { background:rgba(0,0,0,0.1); }
+img::-moz-selection { background:transparent; }
+img::selection      { background:transparent; }
+img::-moz-selection { background:transparent; }
+
+.nopadding {
+    padding: 0;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar-bg {
+    background: #ad2a2d;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.navbar-custom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0;
+}
+.navbar-brand { padding: 5px 10px; }
+.navbar-brand span { height: 100%; }
+.navbar-brand img {
+    height: 100%;
+    padding: 3px 10px 7px 0;
+    display: inline-block;
+}
+.navbar-toggle { padding: 7px 5px; }
+.navbar a {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+    a.navbar-brand { font-size: 1.35em; }
+    .navbar-nav li {
+        margin: 10px 20px;
+        transition: all 0.1s;
+    }
+    .navbar-nav li a {
+        padding: 3px 0;
+        color: #fff;
+        border-bottom: 2px solid transparent;
+    }
+    .navbar-nav li a:hover {
+        color: #ccc;
+        background: transparent;
+    }
+    .navbar-nav li a:focus { background: transparent; }
+    .navbar-nav li.active {
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-custom  { padding: 0; }
+    a.navbar-brand  { font-size: 1.35em; }
+    .navbar         { border: none; }
+    .navbar-header  {
+        margin: 10px -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-nav     { margin: 0 -15px; }
+    .icon-bar       { background: #fff; }
+    .navbar-nav li a        { padding: 15px 30px; }
+    .navbar-nav li a:hover,
+    .navbar-nav li a:focus
+    {
+        color: #282828;
+    }
+    .navbar-collapse {
+        text-align: right;
+        background: #000;
+        border: none;
+    }
+    .navbar-nav li.active {
+        background: #d9534f;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    a.navbar-brand  { font-size: 1.1em; }
+    .navbar-brand { padding: 0 15px; }
+}
+
+/* GENERAL SECTION STYLES */
+
+.title {
+    padding-bottom: 40px;
+    margin-bottom:  30px;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: .05em;
+    text-align: center;
+    background: url('../img/h1-bg.png') no-repeat center bottom;
+}
+.light  { color: #fff; }
+.dark   { color: #282828; }
+
+.overlay {
+    height: 100%;
+    background: url('../img/ptn-overlay.png') repeat;
+}
+
+.section-padding {
+    padding-top: 125px;
+    padding-bottom: 75px;
+}
+
+
+/* INTRO */
+
+#intro {
+    position: relative;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.65)), url('../img/bg-intro.jpg');
+    background: linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.65)
+        ), url('../img/bg-intro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+#intro h1,
+#intro .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 20;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 1170px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    line-height: 1.5em;
+    color: #fff;
+}
+#intro h1       { top: 50%; }
+#intro .arrow   { top: 92.5%; }
+
+@media only screen and (max-width: 991px) {
+    #intro h1 {
+        width: 65%;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #intro h1 {
+        width: 80%;
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #intro h1       { width: 50%; }
+}
+
+
+/* ABOUT */
+
+#about #image,
+#about #description { padding: 15px; }
+#about #image img   { margin: 0 auto; }
+#about p {
+    line-height: 1.5em;
+    font-size: 1.05em;
+    color: #555;
+}
+
+@media only screen and (max-width: 767px) {
+    #about #description { padding: 15px 30px; }
+}
+
+
+/* VISUAL GUIDES */
+
+#visual-guides {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: -webkit-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.75)), url('../img/bg-tech-center.jpg');
+    background: linear-gradient(
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.75)
+        ), url('../img/bg-tech-center.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+#visual-guides .title {
+    margin-bottom: 40px;
+    background: url('../img/h1-bg-inverse.png') no-repeat center bottom;
+}
+
+#visual-guides .item {
+    padding: 40px 40px 75px 40px;
+    color: #ccc;
+}
+
+#visual-guides .item-left {
+    text-align: left;
+}
+#visual-guides .item-right {
+    text-align: right;
+}
+
+#visual-guides h2 {
+    margin-bottom: 35px;
+    color: #fff;
+    font-size: 1.75em;
+    text-transform: uppercase;
+}
+
+#visual-guides p {
+    margin-bottom: 50px;
+    font-size: 1.15em;
+}
+
+#visual-guides a {
+    text-decoration: none;
+}
+
+#visual-guides .pdf-button {
+    padding: 10px 25px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+
+#visual-guides .pdf-button:hover {
+    color: black;
+    background-color: #fff;
+}
+
+#visual-guides i {
+    margin-right: 10px;
+}
+
+
+/* FACULTY */
+
+#faculty {
+    text-align: center;
+    background: url('../img/ptn-crossword.png') repeat;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    box-shadow: 0 0 5px rgba(0,0,0,.05);
+}
+#faculty .professor { padding: 25px 25px 45px 25px; }
+#faculty img {
+    margin: 0 auto;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+    transition: all 0.5s ease;
+}
+#faculty img:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+#faculty h2, #bio h2 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    color: #282828;
+}
+#faculty p, #bio p { color: #777; }
+
+
+/* ITL NOTE */
+#itl {
+    padding-top: 75px;
+    padding-bottom: 125px;
+    background: -webkit-linear-gradient(rgba(217,69,63,.75), rgba(217,69,63,.85)), url('../img/bg-quest-knowledge.jpg');
+    background: linear-gradient(
+        rgba(217,69,63,.75),
+        rgba(217,69,63,.85)
+        ), url('../img/bg-quest-knowledge.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+}
+
+#itl h1 {
+    padding-bottom: 50px;
+    font-size: 1.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#itl p {
+    font-size: 1.15em;
+    line-height: 1.75em;
+    word-spacing: 0.25em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#itl i { margin-right: 15px; }
+
+@media (max-width: 991px) {
+    #itl {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 0.95em;
+        text-align: center;
+    }
+}
+
+
+/* BIO */
+
+#bio {
+    min-height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url('../img/ptn-crossword.png') repeat;
+}
+#bio #profile-box,
+#bio #profile-about {
+    padding-top: 15px;
+}
+
+#bio #profile-box { padding-right: 75px; }
+#bio #profile-about {
+    min-height: 400px;
+    padding-left: 75px;
+    padding-right: 25px;
+    border-left: 1px solid #282828;
+}
+.btn-back {
+    position: fixed;
+    z-index: 25;
+    top: 25px;
+    right: 50px;
+    color: #d9534f;
+}
+.btn-back:hover {
+    color: #990000;
+}
+
+@media (max-width: 991px) {
+    #bio {
+        padding-top: 75px;
+        text-align: center;
+    }
+
+    #bio img { margin: 0 auto; }
+
+    #bio #profile-box {
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+    }
+
+    #bio #profile-about {
+        min-height: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-left: none;
+    }
+
+    .btn-back { right: 25px; }
+}
+
+#bio h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: .05em;
+}
+#bio h2 { font-size: 1.2em; }
+#bio h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #d9534f;
+    font-size: 1.1em;
+    line-height: 1.45em;
+}
+#bio h4 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1em;
+    font-style: italic;
+    color: #444;
+}
+#bio p { font-size: 1.15em; }
+
+
+/* FOOTER */
+
+#footer {
+    padding: 35px 15px;
+    font-size: 1.05em;
+    color: #ddd;
+    background: url('../img/ptn-darthstripe.png') repeat;
+}
+
+#footer a { color: #fff; }
+#footer i { margin-right: 4px; }
+
+
+/* FADE ANIMATION */
+
+.fadeIn {
+    -webkit-animation: fadeIn .5s ease both;
+    animation: fadeIn .5s ease both;
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
