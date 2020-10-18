@@ -2,9 +2,9 @@
 [http://vandreleal.github.io/washjeff-cis/](http://vandreleal.github.io/washjeff-cis/)
 
 ## Screenshots
-![Homepage](https://raw.githubusercontent.com/vandreleal/washjeff-cis/master/screenshots/01-washjeff__cis.jpeg)
+![Homepage](https://raw.githubusercontent.com/vandreleal/washjeff-cis/main/screenshots/01-washjeff__cis.jpeg)
 
-![Faculty](https://raw.githubusercontent.com/vandreleal/washjeff-cis/master/screenshots/02-washjeff__cis_faculty.jpeg)
+![Faculty](https://raw.githubusercontent.com/vandreleal/washjeff-cis/main/screenshots/02-washjeff__cis_faculty.jpeg)
 
 ## Design Justification
 The objective of this project is coding a new page for CIS department while redesigning the current design available in college’s page. In order to accomplish that some steps will be required as a planning document and HTML5 skills. The planning document has the purpose of describe all ideas visually to create a sense of how the page will look on different devices like desktop, tablet and phones. It’s also useful to organize the content along the page checking the best ways of presenting it to the target audience. This process includes some thinking about navigation, ordination of elements, number of pages to be developed, etc. HTML5 (HTML/CSS/Javascript) will be used to accomplish that as well as some additional tools as described below.
